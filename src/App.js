@@ -4,13 +4,14 @@ import "./App.css";
 import axios from "axios";
 import {BASE_URL, API_KEY} from './constants/index';
 
+
 import Title from './components/Title';
 import Img from './components/Img';
 import Date from './components/Date';
 import Copyright from './components/Copyright';
 import Explanation from './components/Explanation';
+import styled from 'styled-components';
 
-// import {createGlobalStyle} from 'styled-components';
 
 // const GlobalStyle = createGlobalStyle 
 // `h1{ font- family: ${pr => pr.theme.fontFamily};
@@ -45,6 +46,7 @@ function App() {
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p> */}
+      {/* <GlobalStyle> */}
       <h1>Nasa Photo of the Day</h1>
       <p>Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
       <Title title = {title} />
@@ -52,6 +54,7 @@ function App() {
       <Img img ={img} />
       <Explanation explanation ={explanation} />
       <Copyright copyright ={copyright} />
+      {/* </GlobalStyle> */}
     </div>
   );
 }

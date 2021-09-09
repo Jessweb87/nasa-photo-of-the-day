@@ -1,10 +1,25 @@
 import React from "react";
+import styled from "styled-components";
 
-export default function Img(props) {
-    const { img} = props;
-    return (
-        <div className='img-Container'>
-            <img src={img} alt='Nasa picture of the day' ></img>
+const Styledimgdiv = styled.div`
+background-color: ${pr => pr.theme.primaryColor};
+img{
+    border: ${pr => pr.theme.secondaryColor} 1px solid;
+    padding: 1%;
+    border-radius: 20px;
+    margin: 2% 0;
+    background-color: ${pr => pr.theme.secondaryColor};
+}    
+`
+function Img(props){
+    return(
+        <div>
+        <Styledimgdiv>
+        <img src={props.img} alt={props.title} className="mainImg"/>
+        </Styledimgdiv>
         </div>
     )
+
 }
+
+export default Img

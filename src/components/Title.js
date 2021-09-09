@@ -1,10 +1,38 @@
 import React from "react";
 
-export default function Title(props) {
-    const { title } = props;
-    return (
-        <div>
-            <h2 className='picture-title'>The title of the picture: {title}</h2>
-        </div>
+import styled from 'styled-components';
+
+
+const Styledimgdiv = styled.div`
+h1 {
+    font-family: 'Helvetica Neue';
+    font-size: 4rem;
+    color: ${pr => pr.theme.primaryColor};
+    background-color: ${pr => pr.theme.secondaryColor} 03;
+ 
+    margin: -42.88px 0px;
+    background-color: #032357 ;
+}
+    h1{
+       padding: 1%;
+        font-family: 'Helvetica Neue';
+        font-size: 4rem;
+        color: ${pr => pr.theme.white};
+    }
+`
+
+
+function Title(props){
+    return( 
+        <Styledimgdiv>
+        <h1>{props.title}</h1>
+        
+         <h1> {props.title} </h1>
+         
+        </Styledimgdiv>
+    
+
     )
 }
+
+export default Title

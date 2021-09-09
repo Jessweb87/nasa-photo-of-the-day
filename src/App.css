@@ -1,12 +1,6 @@
 .App {
   text-align: center;
 }
-.App .img-container {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-}
 
 .App-logo {
   height: 40vmin;
@@ -41,4 +35,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.App img {
+  border-radius: 1500px;
 }
